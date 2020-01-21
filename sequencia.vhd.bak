@@ -1,0 +1,80 @@
+-- Sequencia 
+
+library IEEE;                                                        
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+
+entity sequencia is 
+	port ( contador: in std_logic;
+					tvm: out std_logic;
+					tam: out std_logic;
+					tvd: out std_logic;
+					pvm: out std_logic;
+					pvd: out std_logic);
+end sequencia;
+
+architecture arquitetura of sequencia is
+
+	begin 
+	
+		process(contador)
+		
+			begin
+			
+				if bcd0 < 10 then
+	
+					led_transito_vermelho <= '0';
+					led_transito_amarelo <= '0';
+					led_transito_verde <= '1';
+					led_pedestre_vermelho <= '1';
+					led_pedestre_verde <= '0';
+					
+				elsif bcd0 < 11 then
+				
+					led_transito_vermelho <= '0';
+					led_transito_amarelo <= '0';
+					led_transito_verde <= '0';
+					led_pedestre_vermelho <= '1';
+					led_pedestre_verde <= '0';
+											
+				elsif bcd0 < 21 then
+				
+					led_transito_vermelho <= '1';
+					led_transito_amarelo <= '0';
+					led_transito_verde <= '1';
+					led_pedestre_vermelho <= '1';
+					led_pedestre_verde <= '0';
+					
+				elsif bcd0 < 26 then
+				
+					led_transito_vermelho <= '0';
+					led_transito_amarelo <= '1';
+					led_transito_verde <= '0';
+					led_pedestre_vermelho <= '0';
+					led_pedestre_verde <= '1';
+					
+				elsif bcd0 < 29 then	
+				
+					led_transito_vermelho <= '1';
+					led_transito_amarelo <= '0';
+					led_transito_verde <= '0';
+					led_pedestre_vermelho <= '1';
+					led_pedestre_verde <= '0';
+					
+				elsif bcd0 < 44 then	
+				
+					led_transito_vermelho <= '1';
+					led_transito_amarelo <= '0';
+					led_transito_verde <= '0';
+					led_pedestre_vermelho <= '0';
+					led_pedestre_verde <= '1';
+
+				elsif bcd0 < 46 then	
+				
+					led_transito_vermelho <= '1';
+					led_transito_amarelo <= '0';
+					led_transito_verde <= '0';
+					led_pedestre_vermelho <= '1';
+					led_pedestre_verde <= '0';
+					
+				end if;

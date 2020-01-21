@@ -1,0 +1,49 @@
+--Contador 0 -> 45
+
+library IEEE;                                                        
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+ 
+entity contador is
+	port(	clock: in std_logic;
+			reset: in std_logic;
+				 q: out std_logic_vector(5 downto 0));
+end contador;
+
+architecture arquitetura of contador is
+
+	begin 
+	
+		process(clock, reset)
+		
+			variable qtemp: std_logic_vector (5 downto 0);
+			
+			begin
+			
+				if reset = '1' then
+				
+					qtemp := "000000";
+					q <= "000000";
+					
+				else
+				
+					if qtemp < 46 then 
+						
+						qtemp := qtemp + 1;
+						
+					else 
+					
+						qtemp := "000000"
+						
+					end if;
+						
+					qtemp:=qtemp;
+						
+				end if;
+					
+				q <= qtemp;
+				
+			end if;
+		end process;
+	end arquitetura;
+					
