@@ -1,0 +1,115 @@
+|semaforo_com_botao
+clock => divisor:divisorDeClock.clock
+botao => contador:contadorDe1Hz.reset
+buzzer <= sequencia:luzesDoSemaforo.led_pedestre_verde
+tvm <= sequencia:luzesDoSemaforo.led_transito_vermelho
+tam <= sequencia:luzesDoSemaforo.led_transito_amarelo
+tvd <= sequencia:luzesDoSemaforo.led_transito_verde
+pvm <= sequencia:luzesDoSemaforo.led_pedestre_vermelho
+pvd <= sequencia:luzesDoSemaforo.led_pedestre_verde
+
+
+|semaforo_com_botao|divisor:divisorDeClock
+clock => div.CLK
+clock => count[0].CLK
+clock => count[1].CLK
+clock => count[2].CLK
+clock => count[3].CLK
+clock => count[4].CLK
+clock => count[5].CLK
+clock => count[6].CLK
+clock => count[7].CLK
+clock => count[8].CLK
+clock => count[9].CLK
+clock => count[10].CLK
+clock => count[11].CLK
+clock => count[12].CLK
+clock => count[13].CLK
+clock => count[14].CLK
+clock => count[15].CLK
+clock => count[16].CLK
+clock => count[17].CLK
+clock => count[18].CLK
+clock => count[19].CLK
+clock => count[20].CLK
+clock => count[21].CLK
+clock => count[22].CLK
+clock => count[23].CLK
+clock => count[24].CLK
+clock => count[25].CLK
+clock => count[26].CLK
+clock => count[27].CLK
+clock => count[28].CLK
+clock => count[29].CLK
+clock => count[30].CLK
+clock => count[31].CLK
+q <= div.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|semaforo_com_botao|contador:contadorDe1Hz
+clock => trava.CLK
+clock => qtemp[0].CLK
+clock => qtemp[1].CLK
+clock => qtemp[2].CLK
+clock => qtemp[3].CLK
+clock => qtemp[4].CLK
+clock => qtemp[5].CLK
+reset => process_0.IN1
+q[0] <= q.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|semaforo_com_botao|sequencia:luzesDoSemaforo
+q[0] => LessThan0.IN12
+q[0] => LessThan1.IN12
+q[0] => LessThan2.IN12
+q[0] => LessThan3.IN12
+q[0] => LessThan4.IN12
+q[0] => LessThan5.IN12
+q[0] => LessThan6.IN12
+q[1] => LessThan0.IN11
+q[1] => LessThan1.IN11
+q[1] => LessThan2.IN11
+q[1] => LessThan3.IN11
+q[1] => LessThan4.IN11
+q[1] => LessThan5.IN11
+q[1] => LessThan6.IN11
+q[2] => LessThan0.IN10
+q[2] => LessThan1.IN10
+q[2] => LessThan2.IN10
+q[2] => LessThan3.IN10
+q[2] => LessThan4.IN10
+q[2] => LessThan5.IN10
+q[2] => LessThan6.IN10
+q[3] => LessThan0.IN9
+q[3] => LessThan1.IN9
+q[3] => LessThan2.IN9
+q[3] => LessThan3.IN9
+q[3] => LessThan4.IN9
+q[3] => LessThan5.IN9
+q[3] => LessThan6.IN9
+q[4] => LessThan0.IN8
+q[4] => LessThan1.IN8
+q[4] => LessThan2.IN8
+q[4] => LessThan3.IN8
+q[4] => LessThan4.IN8
+q[4] => LessThan5.IN8
+q[4] => LessThan6.IN8
+q[5] => LessThan0.IN7
+q[5] => LessThan1.IN7
+q[5] => LessThan2.IN7
+q[5] => LessThan3.IN7
+q[5] => LessThan4.IN7
+q[5] => LessThan5.IN7
+q[5] => LessThan6.IN7
+led_transito_vermelho <= led_transito_vermelho$latch.DB_MAX_OUTPUT_PORT_TYPE
+led_transito_amarelo <= led_transito_amarelo$latch.DB_MAX_OUTPUT_PORT_TYPE
+led_transito_verde <= led_transito_verde$latch.DB_MAX_OUTPUT_PORT_TYPE
+led_pedestre_vermelho <= led_pedestre_vermelho$latch.DB_MAX_OUTPUT_PORT_TYPE
+led_pedestre_verde <= led_pedestre_verde$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

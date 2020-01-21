@@ -1,0 +1,1377 @@
+TimeQuest Timing Analyzer report for semaforo_com_botao
+Fri Jan 17 15:07:42 2020
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Setup: 'divisor:divisorDeClock|div'
+ 13. Slow Model Hold: 'clock'
+ 14. Slow Model Hold: 'divisor:divisorDeClock|div'
+ 15. Slow Model Recovery: 'divisor:divisorDeClock|div'
+ 16. Slow Model Removal: 'divisor:divisorDeClock|div'
+ 17. Slow Model Minimum Pulse Width: 'clock'
+ 18. Slow Model Minimum Pulse Width: 'divisor:divisorDeClock|div'
+ 19. Slow Model Datasheet Report
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clock'
+ 26. Fast Model Setup: 'divisor:divisorDeClock|div'
+ 27. Fast Model Hold: 'clock'
+ 28. Fast Model Hold: 'divisor:divisorDeClock|div'
+ 29. Fast Model Recovery: 'divisor:divisorDeClock|div'
+ 30. Fast Model Removal: 'divisor:divisorDeClock|div'
+ 31. Fast Model Minimum Pulse Width: 'clock'
+ 32. Fast Model Minimum Pulse Width: 'divisor:divisorDeClock|div'
+ 33. Fast Model Datasheet Report
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Recovery Transfers
+ 38. Removal Transfers
+ 39. Report TCCS
+ 40. Report RSKM
+ 41. Unconstrained Paths
+ 42. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; semaforo_com_botao                                 ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                 ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+; Clock Name                 ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                        ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+; clock                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                      ;
+; divisor:divisorDeClock|div ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor:divisorDeClock|div } ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+
+
++------------------------------------------------------------------+
+; Slow Model Fmax Summary                                          ;
++------------+-----------------+----------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                 ; Note ;
++------------+-----------------+----------------------------+------+
+; 167.7 MHz  ; 167.7 MHz       ; clock                      ;      ;
+; 467.29 MHz ; 467.29 MHz      ; divisor:divisorDeClock|div ;      ;
++------------+-----------------+----------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------+
+; Slow Model Setup Summary                            ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clock                      ; -4.963 ; -97.583       ;
+; divisor:divisorDeClock|div ; -1.140 ; -7.721        ;
++----------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Slow Model Hold Summary                             ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clock                      ; -2.525 ; -2.525        ;
+; divisor:divisorDeClock|div ; 0.544  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Slow Model Recovery Summary                         ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; divisor:divisorDeClock|div ; -0.666 ; -4.662        ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Slow Model Removal Summary                         ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; divisor:divisorDeClock|div ; 1.436 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
++-----------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary              ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clock                      ; -1.380 ; -34.380       ;
+; divisor:divisorDeClock|div ; -0.500 ; -7.000        ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                          ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.963 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.999      ;
+; -4.961 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.000      ; 5.997      ;
+; -4.955 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 5.991      ;
+; -4.820 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.007      ; 5.863      ;
+; -4.818 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.007      ; 5.861      ;
+; -4.817 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.853      ;
+; -4.812 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.007      ; 5.855      ;
+; -4.719 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.754      ;
+; -4.717 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 5.752      ;
+; -4.711 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 5.746      ;
+; -4.674 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.007      ; 5.717      ;
+; -4.654 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.689      ;
+; -4.652 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 5.687      ;
+; -4.646 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 5.681      ;
+; -4.615 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.650      ;
+; -4.613 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 5.648      ;
+; -4.607 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 5.642      ;
+; -4.573 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.608      ;
+; -4.535 ; divisor:divisorDeClock|count[12] ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.007      ; 5.578      ;
+; -4.533 ; divisor:divisorDeClock|count[12] ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.007      ; 5.576      ;
+; -4.527 ; divisor:divisorDeClock|count[12] ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.007      ; 5.570      ;
+; -4.512 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.547      ;
+; -4.510 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 5.545      ;
+; -4.508 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.543      ;
+; -4.504 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 5.539      ;
+; -4.473 ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.508      ;
+; -4.471 ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 5.506      ;
+; -4.469 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.504      ;
+; -4.465 ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 5.500      ;
+; -4.450 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.479      ;
+; -4.450 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.479      ;
+; -4.450 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.479      ;
+; -4.449 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.007     ; 5.478      ;
+; -4.449 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.478      ;
+; -4.442 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.471      ;
+; -4.439 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.468      ;
+; -4.438 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.467      ;
+; -4.437 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.466      ;
+; -4.433 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; -0.007     ; 5.462      ;
+; -4.407 ; divisor:divisorDeClock|count[11] ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.007      ; 5.450      ;
+; -4.405 ; divisor:divisorDeClock|count[11] ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.007      ; 5.448      ;
+; -4.399 ; divisor:divisorDeClock|count[11] ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.007      ; 5.442      ;
+; -4.389 ; divisor:divisorDeClock|count[12] ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.007      ; 5.432      ;
+; -4.366 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.401      ;
+; -4.327 ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.362      ;
+; -4.307 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.343      ;
+; -4.307 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.343      ;
+; -4.307 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.343      ;
+; -4.306 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 5.342      ;
+; -4.306 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.342      ;
+; -4.303 ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.338      ;
+; -4.301 ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 5.336      ;
+; -4.299 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.335      ;
+; -4.296 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.332      ;
+; -4.295 ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 5.330      ;
+; -4.295 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.331      ;
+; -4.294 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.330      ;
+; -4.290 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 5.326      ;
+; -4.261 ; divisor:divisorDeClock|count[11] ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.007      ; 5.304      ;
+; -4.240 ; divisor:divisorDeClock|count[13] ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.007      ; 5.283      ;
+; -4.238 ; divisor:divisorDeClock|count[13] ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.007      ; 5.281      ;
+; -4.232 ; divisor:divisorDeClock|count[13] ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.007      ; 5.275      ;
+; -4.206 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.234      ;
+; -4.206 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.234      ;
+; -4.206 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.234      ;
+; -4.205 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.008     ; 5.233      ;
+; -4.205 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.233      ;
+; -4.198 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.226      ;
+; -4.195 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.223      ;
+; -4.194 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.222      ;
+; -4.193 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.221      ;
+; -4.189 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.217      ;
+; -4.172 ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.207      ;
+; -4.170 ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 5.205      ;
+; -4.164 ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 5.199      ;
+; -4.157 ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.192      ;
+; -4.141 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.169      ;
+; -4.141 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.169      ;
+; -4.141 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.169      ;
+; -4.140 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.008     ; 5.168      ;
+; -4.140 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.168      ;
+; -4.133 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.161      ;
+; -4.130 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.158      ;
+; -4.129 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.157      ;
+; -4.128 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.156      ;
+; -4.124 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.152      ;
+; -4.102 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.130      ;
+; -4.102 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.130      ;
+; -4.102 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.130      ;
+; -4.101 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.008     ; 5.129      ;
+; -4.101 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.129      ;
+; -4.094 ; divisor:divisorDeClock|count[13] ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.007      ; 5.137      ;
+; -4.094 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.122      ;
+; -4.091 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.119      ;
+; -4.090 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.118      ;
+; -4.089 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.117      ;
+; -4.085 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; -0.008     ; 5.113      ;
+; -4.064 ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 5.099      ;
+; -4.062 ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 5.097      ;
+; -4.056 ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 5.091      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'divisor:divisorDeClock|div'                                                                                                                                ;
++--------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; -1.140 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.176      ;
+; -1.140 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.176      ;
+; -1.140 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.176      ;
+; -1.140 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.176      ;
+; -1.140 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.176      ;
+; -1.140 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.176      ;
+; -1.104 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.140      ;
+; -1.104 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.140      ;
+; -1.104 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.140      ;
+; -1.104 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.140      ;
+; -1.104 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.140      ;
+; -1.104 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 2.140      ;
+; -0.961 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.997      ;
+; -0.961 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.997      ;
+; -0.961 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.997      ;
+; -0.961 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.997      ;
+; -0.961 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.997      ;
+; -0.961 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.997      ;
+; -0.881 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.917      ;
+; -0.845 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.881      ;
+; -0.839 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.875      ;
+; -0.839 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.875      ;
+; -0.839 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.875      ;
+; -0.839 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.875      ;
+; -0.839 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.875      ;
+; -0.839 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.875      ;
+; -0.833 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.869      ;
+; -0.762 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.798      ;
+; -0.719 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.755      ;
+; -0.719 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.755      ;
+; -0.719 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.755      ;
+; -0.719 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.755      ;
+; -0.719 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.755      ;
+; -0.719 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.755      ;
+; -0.702 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.738      ;
+; -0.691 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.727      ;
+; -0.620 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.656      ;
+; -0.580 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.616      ;
+; -0.461 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.497      ;
+; -0.460 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.496      ;
+; -0.075 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.111      ;
++--------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                         ;
++--------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock               ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; -2.525 ; divisor:divisorDeClock|div       ; divisor:divisorDeClock|div       ; divisor:divisorDeClock|div ; clock       ; 0.000        ; 2.666      ; 0.657      ;
+; -2.025 ; divisor:divisorDeClock|div       ; divisor:divisorDeClock|div       ; divisor:divisorDeClock|div ; clock       ; -0.500       ; 2.666      ; 0.657      ;
+; 0.524  ; divisor:divisorDeClock|count[31] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.790      ;
+; 0.788  ; divisor:divisorDeClock|count[15] ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.054      ;
+; 0.788  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.054      ;
+; 0.793  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[1]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.059      ;
+; 0.794  ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.060      ;
+; 0.798  ; divisor:divisorDeClock|count[17] ; divisor:divisorDeClock|count[17] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.064      ;
+; 0.799  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[27] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799  ; divisor:divisorDeClock|count[29] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799  ; divisor:divisorDeClock|count[30] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799  ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[2]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.828  ; divisor:divisorDeClock|count[28] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828  ; divisor:divisorDeClock|count[10] ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828  ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[3]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[26] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.094      ;
+; 1.176  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[2]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.442      ;
+; 1.177  ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.443      ;
+; 1.182  ; divisor:divisorDeClock|count[30] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182  ; divisor:divisorDeClock|count[29] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[3]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[26] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.448      ;
+; 1.214  ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.480      ;
+; 1.214  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[27] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.480      ;
+; 1.214  ; divisor:divisorDeClock|count[28] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.480      ;
+; 1.214  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.480      ;
+; 1.247  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[3]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.513      ;
+; 1.253  ; divisor:divisorDeClock|count[29] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[27] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.274  ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.540      ;
+; 1.285  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.551      ;
+; 1.285  ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.551      ;
+; 1.285  ; divisor:divisorDeClock|count[28] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.551      ;
+; 1.285  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.551      ;
+; 1.285  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.551      ;
+; 1.318  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.584      ;
+; 1.324  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.590      ;
+; 1.324  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.590      ;
+; 1.324  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.590      ;
+; 1.324  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.590      ;
+; 1.334  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.600      ;
+; 1.341  ; divisor:divisorDeClock|count[15] ; divisor:divisorDeClock|count[17] ; clock                      ; clock       ; 0.000        ; -0.007     ; 1.600      ;
+; 1.345  ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.611      ;
+; 1.349  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[1]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.616      ;
+; 1.356  ; divisor:divisorDeClock|count[28] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.622      ;
+; 1.356  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.622      ;
+; 1.360  ; divisor:divisorDeClock|count[14] ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.627      ;
+; 1.389  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.655      ;
+; 1.390  ; divisor:divisorDeClock|count[16] ; divisor:divisorDeClock|count[17] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.657      ;
+; 1.395  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.661      ;
+; 1.395  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.661      ;
+; 1.398  ; divisor:divisorDeClock|count[22] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.665      ;
+; 1.405  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[26] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.671      ;
+; 1.416  ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.682      ;
+; 1.419  ; divisor:divisorDeClock|count[21] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.686      ;
+; 1.420  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[2]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.687      ;
+; 1.427  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.693      ;
+; 1.427  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.693      ;
+; 1.444  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.710      ;
+; 1.466  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.732      ;
+; 1.466  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.732      ;
+; 1.476  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[27] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.742      ;
+; 1.483  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.749      ;
+; 1.491  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[3]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.758      ;
+; 1.498  ; divisor:divisorDeClock|count[10] ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.764      ;
+; 1.498  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.764      ;
+; 1.512  ; divisor:divisorDeClock|count[20] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.779      ;
+; 1.515  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.781      ;
+; 1.531  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.797      ;
+; 1.532  ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.798      ;
+; 1.536  ; divisor:divisorDeClock|count[17] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.802      ;
+; 1.537  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.803      ;
+; 1.547  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.813      ;
+; 1.554  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.820      ;
+; 1.562  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.829      ;
+; 1.566  ; divisor:divisorDeClock|count[19] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.833      ;
+; 1.584  ; divisor:divisorDeClock|count[14] ; divisor:divisorDeClock|count[17] ; clock                      ; clock       ; 0.000        ; -0.006     ; 1.844      ;
+; 1.586  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.852      ;
+; 1.586  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.852      ;
+; 1.618  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.884      ;
+; 1.625  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.891      ;
+; 1.625  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.891      ;
+; 1.628  ; divisor:divisorDeClock|count[22] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.895      ;
+; 1.632  ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.008      ; 1.906      ;
+; 1.633  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.900      ;
+; 1.640  ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.906      ;
+; 1.643  ; divisor:divisorDeClock|count[24] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; -0.006     ; 1.903      ;
+; 1.647  ; divisor:divisorDeClock|count[18] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.914      ;
+; 1.649  ; divisor:divisorDeClock|count[21] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; 0.001      ; 1.916      ;
+; 1.657  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.923      ;
+; 1.689  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 1.955      ;
++--------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'divisor:divisorDeClock|div'                                                                                                                                ;
++-------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.544 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.810      ;
+; 0.809 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.075      ;
+; 0.815 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.081      ;
+; 0.840 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.106      ;
+; 0.845 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.111      ;
+; 0.996 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.262      ;
+; 1.198 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.464      ;
+; 1.226 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.492      ;
+; 1.230 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.496      ;
+; 1.231 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.497      ;
+; 1.269 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.535      ;
+; 1.284 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.550      ;
+; 1.297 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.563      ;
+; 1.350 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.616      ;
+; 1.355 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.621      ;
+; 1.368 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.634      ;
+; 1.379 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.645      ;
+; 1.390 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.656      ;
+; 1.426 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.692      ;
+; 1.461 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.727      ;
+; 1.472 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.738      ;
+; 1.489 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.755      ;
+; 1.489 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.755      ;
+; 1.489 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.755      ;
+; 1.489 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.755      ;
+; 1.489 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.755      ;
+; 1.497 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.763      ;
+; 1.532 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.798      ;
+; 1.603 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.869      ;
+; 1.609 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.875      ;
+; 1.609 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.875      ;
+; 1.609 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.875      ;
+; 1.615 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.881      ;
+; 1.651 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.917      ;
+; 1.731 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.997      ;
+; 1.731 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.997      ;
+; 1.731 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.997      ;
+; 1.731 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.997      ;
+; 1.874 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 2.140      ;
+; 1.910 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 2.176      ;
+; 1.910 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 2.176      ;
++-------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'divisor:divisorDeClock|div'                                                                                                                          ;
++--------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                         ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; -0.666 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.702      ;
+; -0.666 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.702      ;
+; -0.666 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.702      ;
+; -0.666 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.702      ;
+; -0.666 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.702      ;
+; -0.666 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.702      ;
+; -0.666 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.702      ;
++--------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'divisor:divisorDeClock|div'                                                                                                                          ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                         ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 1.436 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.702      ;
+; 1.436 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.702      ;
+; 1.436 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.702      ;
+; 1.436 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.702      ;
+; 1.436 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.702      ;
+; 1.436 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.702      ;
+; 1.436 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.702      ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|div       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|div       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[21]|clk     ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'divisor:divisorDeClock|div'                                                                              ;
++--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                      ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|trava        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|trava        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[4]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[4]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[5]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[5]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|trava|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|trava|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------+
+
+
+-------------------------------
+; Slow Model Datasheet Report ;
+-------------------------------
+Nothing to report.
+
+
++-----------------------------------------------------+
+; Fast Model Setup Summary                            ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clock                      ; -1.804 ; -29.892       ;
+; divisor:divisorDeClock|div ; -0.018 ; -0.108        ;
++----------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Fast Model Hold Summary                             ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clock                      ; -1.569 ; -1.569        ;
+; divisor:divisorDeClock|div ; 0.251  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Fast Model Recovery Summary                        ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; divisor:divisorDeClock|div ; 0.130 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
++----------------------------------------------------+
+; Fast Model Removal Summary                         ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; divisor:divisorDeClock|div ; 0.750 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
++-----------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary              ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clock                      ; -1.380 ; -34.380       ;
+; divisor:divisorDeClock|div ; -0.500 ; -7.000        ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                          ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.804 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.836      ;
+; -1.802 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.000      ; 2.834      ;
+; -1.761 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.793      ;
+; -1.713 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.752      ;
+; -1.711 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.007      ; 2.750      ;
+; -1.700 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.732      ;
+; -1.687 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.718      ;
+; -1.685 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 2.716      ;
+; -1.670 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.007      ; 2.709      ;
+; -1.655 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.686      ;
+; -1.653 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 2.684      ;
+; -1.644 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 2.675      ;
+; -1.631 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.662      ;
+; -1.629 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 2.660      ;
+; -1.612 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 2.643      ;
+; -1.609 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.648      ;
+; -1.588 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 2.619      ;
+; -1.586 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.611      ;
+; -1.586 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.617      ;
+; -1.585 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.610      ;
+; -1.585 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.610      ;
+; -1.584 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.007     ; 2.609      ;
+; -1.584 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.609      ;
+; -1.584 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 2.615      ;
+; -1.583 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.614      ;
+; -1.579 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.604      ;
+; -1.577 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.602      ;
+; -1.576 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.601      ;
+; -1.575 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.600      ;
+; -1.572 ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.597      ;
+; -1.561 ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.592      ;
+; -1.559 ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 2.590      ;
+; -1.551 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.582      ;
+; -1.545 ; divisor:divisorDeClock|count[12] ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.584      ;
+; -1.543 ; divisor:divisorDeClock|count[12] ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.007      ; 2.582      ;
+; -1.543 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 2.574      ;
+; -1.527 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.558      ;
+; -1.518 ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 2.549      ;
+; -1.502 ; divisor:divisorDeClock|count[12] ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.007      ; 2.541      ;
+; -1.495 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.527      ;
+; -1.494 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.526      ;
+; -1.494 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.526      ;
+; -1.493 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.525      ;
+; -1.493 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.525      ;
+; -1.488 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.520      ;
+; -1.487 ; divisor:divisorDeClock|count[11] ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.526      ;
+; -1.486 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.518      ;
+; -1.485 ; divisor:divisorDeClock|count[11] ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.007      ; 2.524      ;
+; -1.485 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.517      ;
+; -1.484 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.516      ;
+; -1.482 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.513      ;
+; -1.481 ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.513      ;
+; -1.477 ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.508      ;
+; -1.475 ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 2.506      ;
+; -1.469 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.493      ;
+; -1.468 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.492      ;
+; -1.468 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.492      ;
+; -1.467 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.008     ; 2.491      ;
+; -1.467 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.491      ;
+; -1.462 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.486      ;
+; -1.460 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.484      ;
+; -1.459 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.483      ;
+; -1.458 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.482      ;
+; -1.457 ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.488      ;
+; -1.455 ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.479      ;
+; -1.444 ; divisor:divisorDeClock|count[11] ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.007      ; 2.483      ;
+; -1.441 ; divisor:divisorDeClock|count[12] ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.480      ;
+; -1.437 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.461      ;
+; -1.436 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.460      ;
+; -1.436 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.460      ;
+; -1.435 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.008     ; 2.459      ;
+; -1.435 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.459      ;
+; -1.434 ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; -0.001     ; 2.465      ;
+; -1.430 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.454      ;
+; -1.428 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.452      ;
+; -1.427 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.451      ;
+; -1.426 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.450      ;
+; -1.423 ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.447      ;
+; -1.413 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.437      ;
+; -1.412 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.436      ;
+; -1.412 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.436      ;
+; -1.411 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.008     ; 2.435      ;
+; -1.411 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.435      ;
+; -1.410 ; divisor:divisorDeClock|count[13] ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.449      ;
+; -1.408 ; divisor:divisorDeClock|count[13] ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; 0.007      ; 2.447      ;
+; -1.406 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[22] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.430      ;
+; -1.404 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[21] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.428      ;
+; -1.403 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[19] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.427      ;
+; -1.402 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[16] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.426      ;
+; -1.399 ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[11] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.423      ;
+; -1.397 ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[24] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.428      ;
+; -1.395 ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|div       ; clock        ; clock       ; 1.000        ; -0.001     ; 2.426      ;
+; -1.383 ; divisor:divisorDeClock|count[11] ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.422      ;
+; -1.373 ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[14] ; clock        ; clock       ; 1.000        ; -0.001     ; 2.404      ;
+; -1.368 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[12] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.392      ;
+; -1.367 ; divisor:divisorDeClock|count[13] ; divisor:divisorDeClock|count[0]  ; clock        ; clock       ; 1.000        ; 0.007      ; 2.406      ;
+; -1.367 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[13] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.391      ;
+; -1.367 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[20] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.391      ;
+; -1.366 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[6]  ; clock        ; clock       ; 1.000        ; -0.008     ; 2.390      ;
+; -1.366 ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[18] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.390      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'divisor:divisorDeClock|div'                                                                                                                                ;
++--------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; -0.018 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.050      ;
+; -0.003 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.035      ;
+; -0.003 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.035      ;
+; -0.003 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.035      ;
+; -0.003 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.035      ;
+; -0.003 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.035      ;
+; -0.003 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 1.035      ;
+; 0.063  ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.969      ;
+; 0.063  ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.969      ;
+; 0.063  ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.969      ;
+; 0.063  ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.969      ;
+; 0.063  ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.969      ;
+; 0.063  ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.969      ;
+; 0.107  ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.925      ;
+; 0.107  ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.925      ;
+; 0.107  ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.925      ;
+; 0.107  ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.925      ;
+; 0.107  ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.925      ;
+; 0.107  ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.925      ;
+; 0.143  ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.889      ;
+; 0.148  ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148  ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148  ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148  ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148  ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148  ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.884      ;
+; 0.158  ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.874      ;
+; 0.165  ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.867      ;
+; 0.200  ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.832      ;
+; 0.224  ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.808      ;
+; 0.235  ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.797      ;
+; 0.268  ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.764      ;
+; 0.270  ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.762      ;
+; 0.309  ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.723      ;
+; 0.364  ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.668      ;
+; 0.504  ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.528      ;
++--------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                         ;
++--------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock               ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; -1.569 ; divisor:divisorDeClock|div       ; divisor:divisorDeClock|div       ; divisor:divisorDeClock|div ; clock       ; 0.000        ; 1.643      ; 0.367      ;
+; -1.069 ; divisor:divisorDeClock|div       ; divisor:divisorDeClock|div       ; divisor:divisorDeClock|div ; clock       ; -0.500       ; 1.643      ; 0.367      ;
+; 0.241  ; divisor:divisorDeClock|count[31] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.354  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.506      ;
+; 0.355  ; divisor:divisorDeClock|count[15] ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355  ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[1]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.357  ; divisor:divisorDeClock|count[17] ; divisor:divisorDeClock|count[17] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[27] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[2]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359  ; divisor:divisorDeClock|count[29] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; divisor:divisorDeClock|count[30] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.367  ; divisor:divisorDeClock|count[28] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; divisor:divisorDeClock|count[10] ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[3]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[26] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.493  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[2]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.645      ;
+; 0.493  ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.645      ;
+; 0.496  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[3]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[26] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497  ; divisor:divisorDeClock|count[30] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497  ; divisor:divisorDeClock|count[29] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.507  ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[27] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507  ; divisor:divisorDeClock|count[28] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.528  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[3]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.680      ;
+; 0.531  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[27] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532  ; divisor:divisorDeClock|count[29] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.684      ;
+; 0.542  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.694      ;
+; 0.542  ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.694      ;
+; 0.542  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.694      ;
+; 0.542  ; divisor:divisorDeClock|count[28] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.694      ;
+; 0.542  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.694      ;
+; 0.552  ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.704      ;
+; 0.563  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.715      ;
+; 0.566  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.718      ;
+; 0.566  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.718      ;
+; 0.566  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.719      ;
+; 0.575  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[1]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.728      ;
+; 0.577  ; divisor:divisorDeClock|count[14] ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.577  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.729      ;
+; 0.577  ; divisor:divisorDeClock|count[28] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.729      ;
+; 0.582  ; divisor:divisorDeClock|count[15] ; divisor:divisorDeClock|count[17] ; clock                      ; clock       ; 0.000        ; -0.007     ; 0.727      ;
+; 0.582  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.734      ;
+; 0.585  ; divisor:divisorDeClock|count[16] ; divisor:divisorDeClock|count[17] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.738      ;
+; 0.587  ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.739      ;
+; 0.591  ; divisor:divisorDeClock|count[22] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.744      ;
+; 0.598  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.750      ;
+; 0.601  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.753      ;
+; 0.601  ; divisor:divisorDeClock|count[27] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.753      ;
+; 0.609  ; divisor:divisorDeClock|count[21] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.762      ;
+; 0.610  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[2]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.763      ;
+; 0.612  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.764      ;
+; 0.612  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.764      ;
+; 0.617  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[26] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.769      ;
+; 0.622  ; divisor:divisorDeClock|count[7]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.774      ;
+; 0.636  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.788      ;
+; 0.636  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[30] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.788      ;
+; 0.636  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.788      ;
+; 0.645  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[3]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.798      ;
+; 0.647  ; divisor:divisorDeClock|count[10] ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.799      ;
+; 0.647  ; divisor:divisorDeClock|count[26] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.799      ;
+; 0.651  ; divisor:divisorDeClock|count[20] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.804      ;
+; 0.652  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[27] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.661  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.813      ;
+; 0.668  ; divisor:divisorDeClock|count[1]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.820      ;
+; 0.668  ; divisor:divisorDeClock|count[9]  ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.820      ;
+; 0.670  ; divisor:divisorDeClock|count[17] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.822      ;
+; 0.671  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.823      ;
+; 0.671  ; divisor:divisorDeClock|count[25] ; divisor:divisorDeClock|count[31] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.823      ;
+; 0.677  ; divisor:divisorDeClock|count[19] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.830      ;
+; 0.680  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[4]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.833      ;
+; 0.687  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[28] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.839      ;
+; 0.694  ; divisor:divisorDeClock|count[6]  ; divisor:divisorDeClock|count[7]  ; clock                      ; clock       ; 0.000        ; 0.008      ; 0.854      ;
+; 0.696  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[9]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.848      ;
+; 0.705  ; divisor:divisorDeClock|count[24] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; -0.006     ; 0.851      ;
+; 0.706  ; divisor:divisorDeClock|count[14] ; divisor:divisorDeClock|count[17] ; clock                      ; clock       ; 0.000        ; -0.006     ; 0.852      ;
+; 0.706  ; divisor:divisorDeClock|count[5]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.858      ;
+; 0.706  ; divisor:divisorDeClock|count[3]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.858      ;
+; 0.715  ; divisor:divisorDeClock|count[0]  ; divisor:divisorDeClock|count[5]  ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.868      ;
+; 0.717  ; divisor:divisorDeClock|count[8]  ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.869      ;
+; 0.718  ; divisor:divisorDeClock|count[18] ; divisor:divisorDeClock|count[23] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.871      ;
+; 0.720  ; divisor:divisorDeClock|count[22] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.873      ;
+; 0.722  ; divisor:divisorDeClock|count[23] ; divisor:divisorDeClock|count[29] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.874      ;
+; 0.730  ; divisor:divisorDeClock|count[13] ; divisor:divisorDeClock|count[15] ; clock                      ; clock       ; 0.000        ; 0.008      ; 0.890      ;
+; 0.730  ; divisor:divisorDeClock|count[2]  ; divisor:divisorDeClock|count[8]  ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.882      ;
+; 0.731  ; divisor:divisorDeClock|count[4]  ; divisor:divisorDeClock|count[10] ; clock                      ; clock       ; 0.000        ; 0.000      ; 0.883      ;
+; 0.738  ; divisor:divisorDeClock|count[21] ; divisor:divisorDeClock|count[25] ; clock                      ; clock       ; 0.000        ; 0.001      ; 0.891      ;
+; 0.740  ; divisor:divisorDeClock|count[24] ; divisor:divisorDeClock|count[26] ; clock                      ; clock       ; 0.000        ; -0.006     ; 0.886      ;
++--------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'divisor:divisorDeClock|div'                                                                                                                                ;
++-------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.251 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.403      ;
+; 0.363 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.515      ;
+; 0.366 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.518      ;
+; 0.371 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.523      ;
+; 0.376 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.528      ;
+; 0.446 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.598      ;
+; 0.504 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.656      ;
+; 0.511 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.663      ;
+; 0.516 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.668      ;
+; 0.539 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.691      ;
+; 0.546 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.698      ;
+; 0.556 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.708      ;
+; 0.571 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.723      ;
+; 0.581 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.733      ;
+; 0.584 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.736      ;
+; 0.591 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.743      ;
+; 0.610 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.762      ;
+; 0.612 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.764      ;
+; 0.626 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.778      ;
+; 0.645 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.797      ;
+; 0.656 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.808      ;
+; 0.661 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.813      ;
+; 0.680 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.832      ;
+; 0.715 ; contador:contadorDe1Hz|qtemp[0] ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.867      ;
+; 0.722 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.874      ;
+; 0.732 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; contador:contadorDe1Hz|qtemp[5] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.884      ;
+; 0.737 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.889      ;
+; 0.773 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.925      ;
+; 0.773 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.925      ;
+; 0.773 ; contador:contadorDe1Hz|qtemp[3] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.925      ;
+; 0.817 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.969      ;
+; 0.817 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.969      ;
+; 0.817 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.969      ;
+; 0.817 ; contador:contadorDe1Hz|qtemp[4] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.969      ;
+; 0.883 ; contador:contadorDe1Hz|qtemp[1] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.035      ;
+; 0.898 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.050      ;
+; 0.898 ; contador:contadorDe1Hz|qtemp[2] ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 1.050      ;
++-------+---------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'divisor:divisorDeClock|div'                                                                                                                         ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                         ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.130 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.902      ;
+; 0.130 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.902      ;
+; 0.130 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.902      ;
+; 0.130 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.902      ;
+; 0.130 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.902      ;
+; 0.130 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.902      ;
+; 0.130 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 1.000        ; 0.000      ; 0.902      ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'divisor:divisorDeClock|div'                                                                                                                          ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                         ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.750 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|trava    ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[0] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[2] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[3] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[4] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[5] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; contador:contadorDe1Hz|trava ; contador:contadorDe1Hz|qtemp[1] ; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 0.000        ; 0.000      ; 0.902      ;
++-------+------------------------------+---------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; divisor:divisorDeClock|div       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; divisor:divisorDeClock|div       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; divisorDeClock|count[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; divisorDeClock|count[21]|clk     ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'divisor:divisorDeClock|div'                                                                              ;
++--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                      ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|qtemp[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|trava        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contador:contadorDe1Hz|trava        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[4]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[4]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[5]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|qtemp[5]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|trava|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; contadorDe1Hz|trava|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:divisorDeClock|div ; Rise       ; divisorDeClock|div~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------+
+
+
+-------------------------------
+; Fast Model Datasheet Report ;
+-------------------------------
+Nothing to report.
+
+
++--------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                        ;
++-----------------------------+----------+--------+----------+---------+---------------------+
+; Clock                       ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack            ; -4.963   ; -2.525 ; -0.666   ; 0.750   ; -1.380              ;
+;  clock                      ; -4.963   ; -2.525 ; N/A      ; N/A     ; -1.380              ;
+;  divisor:divisorDeClock|div ; -1.140   ; 0.251  ; -0.666   ; 0.750   ; -0.500              ;
+; Design-wide TNS             ; -105.304 ; -2.525 ; -4.662   ; 0.0     ; -41.38              ;
+;  clock                      ; -97.583  ; -2.525 ; N/A      ; N/A     ; -34.380             ;
+;  divisor:divisorDeClock|div ; -7.721   ; 0.000  ; -4.662   ; 0.000   ; -7.000              ;
++-----------------------------+----------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                     ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; clock                      ; clock                      ; 7920     ; 0        ; 0        ; 0        ;
+; divisor:divisorDeClock|div ; clock                      ; 1        ; 1        ; 0        ; 0        ;
+; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 56       ; 0        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                      ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; clock                      ; clock                      ; 7920     ; 0        ; 0        ; 0        ;
+; divisor:divisorDeClock|div ; clock                      ; 1        ; 1        ; 0        ; 0        ;
+; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 56       ; 0        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                  ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 7        ; 0        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                   ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; divisor:divisorDeClock|div ; divisor:divisorDeClock|div ; 7        ; 0        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 12    ; 12   ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Fri Jan 17 15:07:40 2020
+Info: Command: quartus_sta semaforo_com_botao -c semaforo_com_botao
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 5 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'semaforo_com_botao.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name divisor:divisorDeClock|div divisor:divisorDeClock|div
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.963
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.963       -97.583 clock 
+    Info (332119):    -1.140        -7.721 divisor:divisorDeClock|div 
+Info (332146): Worst-case hold slack is -2.525
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.525        -2.525 clock 
+    Info (332119):     0.544         0.000 divisor:divisorDeClock|div 
+Info (332146): Worst-case recovery slack is -0.666
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.666        -4.662 divisor:divisorDeClock|div 
+Info (332146): Worst-case removal slack is 1.436
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.436         0.000 divisor:divisorDeClock|div 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -34.380 clock 
+    Info (332119):    -0.500        -7.000 divisor:divisorDeClock|div 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.804
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.804       -29.892 clock 
+    Info (332119):    -0.018        -0.108 divisor:divisorDeClock|div 
+Info (332146): Worst-case hold slack is -1.569
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.569        -1.569 clock 
+    Info (332119):     0.251         0.000 divisor:divisorDeClock|div 
+Info (332146): Worst-case recovery slack is 0.130
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.130         0.000 divisor:divisorDeClock|div 
+Info (332146): Worst-case removal slack is 0.750
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.750         0.000 divisor:divisorDeClock|div 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -34.380 clock 
+    Info (332119):    -0.500        -7.000 divisor:divisorDeClock|div 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4574 megabytes
+    Info: Processing ended: Fri Jan 17 15:07:42 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
